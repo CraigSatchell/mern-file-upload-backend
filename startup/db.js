@@ -1,9 +1,11 @@
 import mongoose from 'mongoose';
-import config from 'config';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 function connectDB() {
     mongoose.connect(
-        config.get('mongoURI'),
+        process.env.mongodbURI,
         { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => console.log('Connected to MongoDB...'))
         .catch((err) => {
