@@ -13,7 +13,6 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 import itemRoutes from './routes/items.js';
-import { connect } from 'mongodb';
 
 app.use('/items', itemRoutes)
 app.get('/', (req, res) => {

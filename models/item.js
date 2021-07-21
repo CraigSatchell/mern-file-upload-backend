@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const itemSchema = new mongoose.Schema({
    title: String,
@@ -7,5 +7,5 @@ const itemSchema = new mongoose.Schema({
 
 const Item = mongoose.model('Item', itemSchema);
 
-exports.Item = Item;
+export default Item;
 
